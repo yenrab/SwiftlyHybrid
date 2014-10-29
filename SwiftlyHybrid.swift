@@ -12,7 +12,11 @@ import WebKit
 struct SwiftlyHybridError {
     var description:String?
 }
-
+/*
+    // for OSX
+func buildSwiftly(theViewController:NSViewController, webFileTypesInApp:[String]?, webDirectoriesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
+*/
+// for iOS
 func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]?, webDirectoriesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
     var creationError:SwiftlyHybridError?
     var webView:WKWebView?
@@ -38,8 +42,6 @@ func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]
         theConfiguration.userContentController.addScriptMessageHandler(messageHandler, name: "interOp")
         
         webView = WKWebView(frame: theViewController.view.frame, configuration: theConfiguration)
-        
-        
         var url = NSURL(fileURLWithPath: indexHTMLPath!)
         var request = NSURLRequest(URL: url!)
         webView!.loadRequest(request)
