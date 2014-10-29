@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="inter.js"></script>
+        <script src="someJSLibrary/sillyLib.js"></script>
+</head>
+<body>
+    <br/>
+    <br/>
+    This button executes code that calls down to Swift and then Swift calls the storeAndShow JavaScript function.
+    <br/>
+    <br/>
+    <div class="isButton" onclick="sendCount()">Show Click Count</div>
+    <br/>
+    <br/>
+    <div id="resultDisplay">Result Display</div>
+    <br/>
+    <br/>
+    Some JavaScript libraries require they reside in specific directories in your web project. For those kinds of libraries put the entire library directory in the root of the project. This is mocked up in this example with the 'someJSLibrary' directory. This button executes a function in the someJSLibrary library.
+    <br/>
+    <br/>
+    <div class="isButton tall" onclick="doLibCall()">Show someJSLibrary Function Result</div>
+</body>
+</html>
