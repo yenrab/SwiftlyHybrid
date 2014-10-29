@@ -20,7 +20,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
             println(errorDescription)
         }
         else{
-            println(theWebView)
             appWebView = theWebView
         }
 

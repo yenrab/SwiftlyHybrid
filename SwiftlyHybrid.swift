@@ -73,15 +73,16 @@ internal func moveWebFiles(movableFileTypes:[String])->(String?, String?){
             if fileManager.fileExistsAtPath(destinationPath){
                 var removeError:NSError?
                 fileManager.removeItemAtPath(destinationPath, error:&removeError)
-                if removeError != nil{
-                    return (nil,removeError?.description)
+                if let errorDescription = removeError?.description{
+                    return (nil,errorDescription)
                 }
             }
             let resourcePath = resourcesPath!.stringByAppendingPathComponent(resourceName)
-            println(resourcePath)
             var copyError:NSError?
             fileManager.copyItemAtPath(resourcePath, toPath: destinationPath, error: &copyError)
-            println(copyError?.description)
+            if let errorDescription = copyError?.description{
+                return (nil, errorDescription)
+            }
             if resourceName.lowercaseString == "index.html"{
                 indexPath = destinationPath
             }
@@ -102,7 +103,6 @@ internal func moveDirectories(topLevelDirectoryNames:[String]) -> (String?, Stri
     let fileManager = NSFileManager.defaultManager()
     let resourcesList = fileManager.contentsOfDirectoryAtPath(bundlePath!, error: &anError) as [String]
     for resourceName in resourcesList{
-        println(resourceName)
         var isDirectoryType:ObjCBool = false
         let resourcePath = bundlePath?.stringByAppendingPathComponent(resourceName)
         let found = fileManager.fileExistsAtPath(resourcePath!, isDirectory: &isDirectoryType)
@@ -110,20 +110,19 @@ internal func moveDirectories(topLevelDirectoryNames:[String]) -> (String?, Stri
                             && resourceName != "Frameworks"
                             && resourceName != "META-INF"
                             && resourceName != "_CodeSignature"{
-            println("\(resourceName) is a directory")
             let sourcePath = bundlePath?.stringByAppendingPathComponent(resourceName)
             let destinationPath = tempPath.stringByAppendingPathComponent(resourceName)
             if fileManager.fileExistsAtPath(destinationPath){
                 var removeError:NSError?
                 fileManager.removeItemAtPath(destinationPath, error:&removeError)
-                if removeError != nil{
-                    return (nil,removeError?.description)
+                if let errorDescription = removeError?.description{
+                    return (nil,errorDescription)
                 }
             }
             var copyError:NSError?
             fileManager.copyItemAtPath(sourcePath!, toPath: destinationPath, error: &copyError)
             if let errorDescription = copyError?.description{
-                println(errorDescription)
+                return (nil, errorDescription)
             }
         }
         
