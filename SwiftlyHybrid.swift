@@ -48,7 +48,7 @@ func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]
         theViewController.view.addSubview(webView!)
     }
     else{
-        creationError = SwiftlyHybridError(description: "Error: The view controller for your application must implement WKScriptMessagehandler")
+        creationError = SwiftlyHybridError(description: "Error: The view controller for your application must implement the WKScriptMessagehandler protocol")
     }
     return (webView,creationError)
     
