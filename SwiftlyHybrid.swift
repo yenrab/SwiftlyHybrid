@@ -158,7 +158,6 @@ internal func searchForIndexHTMLFile(var resources:[[String]], curIndex:Int, fil
     let directoryPath = resources[curIndex][0]
     let resourcePath = directoryPath.stringByAppendingPathComponent(resource)
     var anError:NSError?
-    let fileManager = NSFileManager.defaultManager()
     if resource.lowercaseString == "index.html"{
         return (resourcePath, anError)
     }
