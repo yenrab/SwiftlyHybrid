@@ -163,7 +163,7 @@ internal func searchForIndexHTMLFile(var resources:[[String]], curIndex:Int, fil
     }
     else{
         var isDirectoryType:ObjCBool = false
-        let found = fileManager.fileExistsAtPath(resourcePath, isDirectory: &isDirectoryType)
+        fileManager.fileExistsAtPath(resourcePath, isDirectory: &isDirectoryType)
         if isDirectoryType{
             let resourcesList = fileManager.contentsOfDirectoryAtPath(resourcePath, error: &anError) as [String]
             if anError != nil{
