@@ -32,7 +32,7 @@ struct SwiftlyHybridError {
 func buildSwiftly(theViewController:NSViewController, webFileTypesInApp:[String]?, webDirectoriesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
 */
 // for iOS
-func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]?, webDirectoriesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
+func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
     var creationError:SwiftlyHybridError?
     var webView:WKWebView?
     
@@ -48,7 +48,7 @@ func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]
             }
         }
         if webFileTypesInApp != nil{
-            let (foundIndexPath,moveError) = moveDirectories(webDirectoriesInApp!, (indexHTMLPath == nil))
+            let (foundIndexPath,moveError) = moveDirectories((indexHTMLPath == nil))
             if indexHTMLPath == nil{
                 indexHTMLPath = foundIndexPath
             }
@@ -110,7 +110,7 @@ internal func moveWebFiles(movableFileTypes:[String])->(String?, String?){
     return (indexPath,nil)
 }
 
-internal func moveDirectories(topLevelDirectoryNames:[String], var searchForIndexHTML:Bool) -> (String?, String?){
+internal func moveDirectories(var searchForIndexHTML:Bool) -> (String?, String?){
     var indexHTMLPath:String?
     var moveErrorDescription:String?
     

@@ -15,7 +15,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         //add to or remove from the array the extenstions of the web files that are part of your app
-        let (theWebView,errorOptional) = buildSwiftly(self, ["js","css","html","png","jpg","gif"], ["subDir"])
+        let (theWebView,errorOptional) = buildSwiftly(self, ["js","css","html","png","jpg","gif"])
         if let errorDescription = errorOptional?.description{
             println(errorDescription)
         }
