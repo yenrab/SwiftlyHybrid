@@ -11,6 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKScriptMessageHandler {
 
     var appWebView:WKWebView?
+    var previousOrientation: UIDeviceOrientation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,9 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         else{
             appWebView = theWebView
         }
+        
+        //this line of code causes the orientationChanged function to be called when the device orientationChanges.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged", name: UIDeviceOrientationDidChangeNotification, object: nil)
 
     }
     //modify this function to do any JavaScript/Swift interop communication
@@ -30,6 +34,21 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         let aCount:Int = Int(sentData["count"] as NSNumber)
         
         appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )", completionHandler: nil)
+    }
+    
+    
+    //This function handles resizing the WKWebView's frame depending on the device orientation.
+    func orientationChanged(){
+        let orientation = UIDevice.currentDevice().orientation
+        if previousOrientation != nil && UIDeviceOrientationIsLandscape(orientation) != UIDeviceOrientationIsLandscape(previousOrientation!)
+            && orientation != UIDeviceOrientation.PortraitUpsideDown
+            && orientation != UIDeviceOrientation.FaceDown
+            && orientation != UIDeviceOrientation.FaceUp{
+                let actualView = appWebView!
+                let updatedFrame = CGRect(x: actualView.frame.origin.x, y: actualView.frame.origin.y, width: actualView.frame.size.height, height: actualView.frame.size.width)
+                actualView.frame = updatedFrame
+        }
+        previousOrientation = orientation
     }
     
     override func didReceiveMemoryWarning() {
