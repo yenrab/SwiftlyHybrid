@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BF373B71A0820F80056A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF373B61A0820F80056A7A2 /* AppDelegate.swift */; };
+		9BF373B91A0820F80056A7A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF373B81A0820F80056A7A2 /* ViewController.swift */; };
+		9BF373BB1A0820F80056A7A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373BA1A0820F80056A7A2 /* Images.xcassets */; };
+		9BF373BE1A0820F80056A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373BC1A0820F80056A7A2 /* Main.storyboard */; };
+		9BF373CA1A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF373C91A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.swift */; };
+		9BF373D71A0821280056A7A2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D31A0821280056A7A2 /* index.html */; };
+		9BF373D81A0821280056A7A2 /* inter.js in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D41A0821280056A7A2 /* inter.js */; };
+		9BF373D91A0821280056A7A2 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D51A0821280056A7A2 /* main.css */; };
+		9BF373DA1A0821280056A7A2 /* someJSLibrary in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D61A0821280056A7A2 /* someJSLibrary */; };
+		9BF373DC1A08213B0056A7A2 /* SwiftlyHybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BF373C41A0820F80056A7A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BF373A91A0820F80056A7A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BF373B01A0820F80056A7A2;
+			remoteInfo = SwiftlyHybridOSXExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BF373B11A0820F80056A7A2 /* SwiftlyHybridOSXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyHybridOSXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF373B51A0820F80056A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF373B61A0820F80056A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BF373B81A0820F80056A7A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BF373BA1A0820F80056A7A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9BF373BD1A0820F80056A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BF373C31A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftlyHybridOSXExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF373C81A0820F80056A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF373C91A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftlyHybridOSXExampleTests.swift; sourceTree = "<group>"; };
+		9BF373D31A0821280056A7A2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/index.html; sourceTree = "<group>"; };
+		9BF373D41A0821280056A7A2 /* inter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = inter.js; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/inter.js; sourceTree = "<group>"; };
+		9BF373D51A0821280056A7A2 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = main.css; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/main.css; sourceTree = "<group>"; };
+		9BF373D61A0821280056A7A2 /* someJSLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = someJSLibrary; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/someJSLibrary; sourceTree = "<group>"; };
+		9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyHybrid.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BF373AE1A0820F80056A7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BF373C01A0820F80056A7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BF373A81A0820F80056A7A2 = {
+			isa = PBXGroup;
+			children = (
+				9BF373B31A0820F80056A7A2 /* SwiftlyHybridOSXExample */,
+				9BF373C61A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests */,
+				9BF373B21A0820F80056A7A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BF373B21A0820F80056A7A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BF373B11A0820F80056A7A2 /* SwiftlyHybridOSXExample.app */,
+				9BF373C31A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BF373B31A0820F80056A7A2 /* SwiftlyHybridOSXExample */ = {
+			isa = PBXGroup;
+			children = (
+				9BF373D31A0821280056A7A2 /* index.html */,
+				9BF373D41A0821280056A7A2 /* inter.js */,
+				9BF373D51A0821280056A7A2 /* main.css */,
+				9BF373D61A0821280056A7A2 /* someJSLibrary */,
+				9BF373B61A0820F80056A7A2 /* AppDelegate.swift */,
+				9BF373B81A0820F80056A7A2 /* ViewController.swift */,
+				9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */,
+				9BF373BA1A0820F80056A7A2 /* Images.xcassets */,
+				9BF373BC1A0820F80056A7A2 /* Main.storyboard */,
+				9BF373B41A0820F80056A7A2 /* Supporting Files */,
+			);
+			path = SwiftlyHybridOSXExample;
+			sourceTree = "<group>";
+		};
+		9BF373B41A0820F80056A7A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BF373B51A0820F80056A7A2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BF373C61A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BF373C91A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.swift */,
+				9BF373C71A0820F80056A7A2 /* Supporting Files */,
+			);
+			path = SwiftlyHybridOSXExampleTests;
+			sourceTree = "<group>";
+		};
+		9BF373C71A0820F80056A7A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BF373C81A0820F80056A7A2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BF373B01A0820F80056A7A2 /* SwiftlyHybridOSXExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BF373CD1A0820F80056A7A2 /* Build configuration list for PBXNativeTarget "SwiftlyHybridOSXExample" */;
+			buildPhases = (
+				9BF373AD1A0820F80056A7A2 /* Sources */,
+				9BF373AE1A0820F80056A7A2 /* Frameworks */,
+				9BF373AF1A0820F80056A7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftlyHybridOSXExample;
+			productName = SwiftlyHybridOSXExample;
+			productReference = 9BF373B11A0820F80056A7A2 /* SwiftlyHybridOSXExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BF373C21A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BF373D01A0820F80056A7A2 /* Build configuration list for PBXNativeTarget "SwiftlyHybridOSXExampleTests" */;
+			buildPhases = (
+				9BF373BF1A0820F80056A7A2 /* Sources */,
+				9BF373C01A0820F80056A7A2 /* Frameworks */,
+				9BF373C11A0820F80056A7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BF373C51A0820F80056A7A2 /* PBXTargetDependency */,
+			);
+			name = SwiftlyHybridOSXExampleTests;
+			productName = SwiftlyHybridOSXExampleTests;
+			productReference = 9BF373C31A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BF373A91A0820F80056A7A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lee Barney";
+				TargetAttributes = {
+					9BF373B01A0820F80056A7A2 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					9BF373C21A0820F80056A7A2 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 9BF373B01A0820F80056A7A2;
+					};
+				};
+			};
+			buildConfigurationList = 9BF373AC1A0820F80056A7A2 /* Build configuration list for PBXProject "SwiftlyHybridOSXExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BF373A81A0820F80056A7A2;
+			productRefGroup = 9BF373B21A0820F80056A7A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BF373B01A0820F80056A7A2 /* SwiftlyHybridOSXExample */,
+				9BF373C21A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BF373AF1A0820F80056A7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BF373D71A0821280056A7A2 /* index.html in Resources */,
+				9BF373DA1A0821280056A7A2 /* someJSLibrary in Resources */,
+				9BF373D91A0821280056A7A2 /* main.css in Resources */,
+				9BF373D81A0821280056A7A2 /* inter.js in Resources */,
+				9BF373BB1A0820F80056A7A2 /* Images.xcassets in Resources */,
+				9BF373BE1A0820F80056A7A2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BF373C11A0820F80056A7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BF373AD1A0820F80056A7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BF373DC1A08213B0056A7A2 /* SwiftlyHybrid.swift in Sources */,
+				9BF373B91A0820F80056A7A2 /* ViewController.swift in Sources */,
+				9BF373B71A0820F80056A7A2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BF373BF1A0820F80056A7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BF373CA1A0820F80056A7A2 /* SwiftlyHybridOSXExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BF373C51A0820F80056A7A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BF373B01A0820F80056A7A2 /* SwiftlyHybridOSXExample */;
+			targetProxy = 9BF373C41A0820F80056A7A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BF373BC1A0820F80056A7A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BF373BD1A0820F80056A7A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BF373CB1A0820F80056A7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BF373CC1A0820F80056A7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9BF373CE1A0820F80056A7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftlyHybridOSXExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9BF373CF1A0820F80056A7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftlyHybridOSXExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9BF373D11A0820F80056A7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftlyHybridOSXExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftlyHybridOSXExample.app/Contents/MacOS/SwiftlyHybridOSXExample";
+			};
+			name = Debug;
+		};
+		9BF373D21A0820F80056A7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftlyHybridOSXExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftlyHybridOSXExample.app/Contents/MacOS/SwiftlyHybridOSXExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BF373AC1A0820F80056A7A2 /* Build configuration list for PBXProject "SwiftlyHybridOSXExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BF373CB1A0820F80056A7A2 /* Debug */,
+				9BF373CC1A0820F80056A7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BF373CD1A0820F80056A7A2 /* Build configuration list for PBXNativeTarget "SwiftlyHybridOSXExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BF373CE1A0820F80056A7A2 /* Debug */,
+				9BF373CF1A0820F80056A7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BF373D01A0820F80056A7A2 /* Build configuration list for PBXNativeTarget "SwiftlyHybridOSXExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BF373D11A0820F80056A7A2 /* Debug */,
+				9BF373D21A0820F80056A7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BF373A91A0820F80056A7A2 /* Project object */;
+}
