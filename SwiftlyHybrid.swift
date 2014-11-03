@@ -29,7 +29,7 @@ struct SwiftlyHybridError {
 }
 /*
     // for OSX
-func buildSwiftly(theViewController:NSViewController, webFileTypesInApp:[String]?, webDirectoriesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
+func buildSwiftly(theViewController:NSViewController, webFileTypesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
 */
 // for iOS
 func buildSwiftly(theViewController:UIViewController, webFileTypesInApp:[String]?) ->(WKWebView?,SwiftlyHybridError?){
