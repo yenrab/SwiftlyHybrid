@@ -62,6 +62,8 @@ class ViewController: NSViewController, WKScriptMessageHandler {
             else{
                 println("no return from JS")
             }
+            
+            
         }
     }
 
