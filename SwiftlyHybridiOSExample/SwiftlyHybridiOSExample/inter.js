@@ -9,6 +9,7 @@ function storeAndShow(updatedCount){
     document.querySelector("#resultDisplay").innerHTML = 'came back'
     count = updatedCount
     document.querySelector("#resultDisplay").innerHTML = count
+    return count
 }
 
 function doLibCall(){
