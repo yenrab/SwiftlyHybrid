@@ -53,10 +53,10 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         //If there is an error calling the JavaScript, that error is passed as the second parameter.
         appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )"){(JSReturnValue:AnyObject?, error:NSError?) in
             if let errorDescription = error?.description{
-                println(errorDescription)
+                println("returned value: \(errorDescription)")
             }
             else if JSReturnValue != nil{
-                println(JSReturnValue!)
+                println("returned value: \(JSReturnValue!)")
             }
             else{
                 println("no return from JS")

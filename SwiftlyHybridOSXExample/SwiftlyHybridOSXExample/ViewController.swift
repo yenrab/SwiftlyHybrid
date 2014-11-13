@@ -49,7 +49,20 @@ class ViewController: NSViewController, WKScriptMessageHandler {
         let sentData = message.body as NSDictionary
         let aCount:Int = Int(sentData["count"] as NSNumber)
         
-        appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )", completionHandler: nil)
+        //the last parameter of evaluateJavaScript is a closure that is called after the JavaScript is run.
+        //If there is a value returned from the JavaScript it is passed to the closure as its first parameter.
+        //If there is an error calling the JavaScript, that error is passed as the second parameter.
+        appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )"){(JSReturnValue:AnyObject?, error:NSError?) in
+            if let errorDescription = error?.description{
+                println("error: \(errorDescription)")
+            }
+            else if JSReturnValue != nil{
+                println("returned value: \(JSReturnValue!)")
+            }
+            else{
+                println("no return from JS")
+            }
+        }
     }
 
 
