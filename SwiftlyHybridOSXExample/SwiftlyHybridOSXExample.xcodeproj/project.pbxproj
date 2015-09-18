@@ -16,7 +16,6 @@
 		9BF373D81A0821280056A7A2 /* inter.js in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D41A0821280056A7A2 /* inter.js */; };
 		9BF373D91A0821280056A7A2 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D51A0821280056A7A2 /* main.css */; };
 		9BF373DA1A0821280056A7A2 /* someJSLibrary in Resources */ = {isa = PBXBuildFile; fileRef = 9BF373D61A0821280056A7A2 /* someJSLibrary */; };
-		9BF373DC1A08213B0056A7A2 /* SwiftlyHybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		9BF373D41A0821280056A7A2 /* inter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = inter.js; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/inter.js; sourceTree = "<group>"; };
 		9BF373D51A0821280056A7A2 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = main.css; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/main.css; sourceTree = "<group>"; };
 		9BF373D61A0821280056A7A2 /* someJSLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = someJSLibrary; path = ../../SwiftlyHybridiOSExample/SwiftlyHybridiOSExample/someJSLibrary; sourceTree = "<group>"; };
-		9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyHybrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 				9BF373D61A0821280056A7A2 /* someJSLibrary */,
 				9BF373B61A0820F80056A7A2 /* AppDelegate.swift */,
 				9BF373B81A0820F80056A7A2 /* ViewController.swift */,
-				9BF373DB1A08213B0056A7A2 /* SwiftlyHybrid.swift */,
 				9BF373BA1A0820F80056A7A2 /* Images.xcassets */,
 				9BF373BC1A0820F80056A7A2 /* Main.storyboard */,
 				9BF373B41A0820F80056A7A2 /* Supporting Files */,
@@ -168,6 +165,8 @@
 		9BF373A91A0820F80056A7A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Lee Barney";
 				TargetAttributes = {
@@ -227,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF373DC1A08213B0056A7A2 /* SwiftlyHybrid.swift in Sources */,
 				9BF373B91A0820F80056A7A2 /* ViewController.swift in Sources */,
 				9BF373B71A0820F80056A7A2 /* AppDelegate.swift in Sources */,
 			);
@@ -417,6 +415,7 @@
 				9BF373CF1A0820F80056A7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BF373D01A0820F80056A7A2 /* Build configuration list for PBXNativeTarget "SwiftlyHybridOSXExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +424,7 @@
 				9BF373D21A0820F80056A7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

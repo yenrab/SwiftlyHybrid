@@ -30,14 +30,17 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //add to or remove from the array the extenstions of the web files that are part of your app
-        let (theWebView,errorOptional) = buildSwiftly(self, ["js","css","html","png","jpg","gif"])
-        if let errorDescription = errorOptional?.description{
-            println(errorDescription)
-        }
-        else{
-            appWebView = theWebView
-        }
+        let indexHTMLPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        
+        let theConfiguration = WKWebViewConfiguration()
+        theConfiguration.userContentController.addScriptMessageHandler(self, name: "interOp")
+        
+        appWebView = WKWebView(frame: self.view.frame, configuration: theConfiguration)
+        let url = NSURL(fileURLWithPath: indexHTMLPath!)
+        let request = NSURLRequest(URL: url)
+        appWebView!.loadRequest(request)
+        self.view.addSubview(appWebView!)
+        
         
         //this line of code causes the orientationChanged function to be called when the device orientationChanges.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged", name: UIDeviceOrientationDidChangeNotification, object: nil)
@@ -45,21 +48,21 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
     //modify this function to do any JavaScript/Swift interop communication
     func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage){
-        let sentData = message.body as NSDictionary
-        let aCount:Int = Int(sentData["count"] as NSNumber)
+        let sentData = message.body as! NSDictionary
+        let aCount:Int = Int(sentData["count"] as! NSNumber)
         
         //the last parameter of evaluateJavaScript is a closure that is called after the JavaScript is run.
         //If there is a value returned from the JavaScript it is passed to the closure as its first parameter.
         //If there is an error calling the JavaScript, that error is passed as the second parameter.
         appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )"){(JSReturnValue:AnyObject?, error:NSError?) in
             if let errorDescription = error?.description{
-                println("returned value: \(errorDescription)")
+                print("returned value: \(errorDescription)")
             }
             else if JSReturnValue != nil{
-                println("returned value: \(JSReturnValue!)")
+                print("returned value: \(JSReturnValue!)")
             }
             else{
-                println("no return from JS")
+                print("no return from JS")
             }
         }
     }

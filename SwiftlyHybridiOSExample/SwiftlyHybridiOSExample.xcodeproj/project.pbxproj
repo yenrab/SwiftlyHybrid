@@ -17,7 +17,6 @@
 		9B61F5EC1A0156AB00A0180E /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 9B61F5E91A0156AB00A0180E /* main.css */; };
 		9B61F5ED1A0156AB00A0180E /* inter.js in Resources */ = {isa = PBXBuildFile; fileRef = 9B61F5EA1A0156AB00A0180E /* inter.js */; };
 		9B61F5EF1A01572B00A0180E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B61F5EE1A01572B00A0180E /* WebKit.framework */; };
-		9B61F5F11A0157AA00A0180E /* SwiftlyHybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61F5F01A0157AA00A0180E /* SwiftlyHybrid.swift */; };
 		9BC32A811A01718300FD8344 /* someJSLibrary in Resources */ = {isa = PBXBuildFile; fileRef = 9BC32A801A01718300FD8344 /* someJSLibrary */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		9B61F5E91A0156AB00A0180E /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
 		9B61F5EA1A0156AB00A0180E /* inter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = inter.js; sourceTree = "<group>"; };
 		9B61F5EE1A01572B00A0180E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		9B61F5F01A0157AA00A0180E /* SwiftlyHybrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftlyHybrid.swift; path = ../../SwiftlyHybrid.swift; sourceTree = "<group>"; };
 		9BC32A801A01718300FD8344 /* someJSLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; path = someJSLibrary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 				9B61F5E91A0156AB00A0180E /* main.css */,
 				9B61F5EA1A0156AB00A0180E /* inter.js */,
 				9BC32A801A01718300FD8344 /* someJSLibrary */,
-				9B61F5F01A0157AA00A0180E /* SwiftlyHybrid.swift */,
 				9B61F5C61A01567500A0180E /* AppDelegate.swift */,
 				9B61F5C81A01567500A0180E /* ViewController.swift */,
 				9B61F5CA1A01567500A0180E /* Main.storyboard */,
@@ -175,7 +172,8 @@
 		9B61F5B91A01567500A0180E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Lee Barney";
 				TargetAttributes = {
 					9B61F5C01A01567500A0180E = {
@@ -235,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B61F5F11A0157AA00A0180E /* SwiftlyHybrid.swift in Sources */,
 				9B61F5C91A01567500A0180E /* ViewController.swift in Sources */,
 				9B61F5C71A01567500A0180E /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +296,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -362,6 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftlyHybridiOSExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barney.lee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -372,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftlyHybridiOSExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barney.lee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -390,6 +390,7 @@
 				);
 				INFOPLIST_FILE = SwiftlyHybridiOSExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barney.lee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftlyHybridiOSExample.app/SwiftlyHybridiOSExample";
 			};
@@ -405,6 +406,7 @@
 				);
 				INFOPLIST_FILE = SwiftlyHybridiOSExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barney.lee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftlyHybridiOSExample.app/SwiftlyHybridiOSExample";
 			};
