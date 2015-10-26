@@ -1,0 +1,16 @@
+.isButton{
+    width:100%;
+    height:45px;
+    background-color: yellow;
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size:35px;
+}
+.tall{
+    height:85px;
+}
+#resultDisplay{
+    font-size:15px;
+    font-weight:bold;
+}
