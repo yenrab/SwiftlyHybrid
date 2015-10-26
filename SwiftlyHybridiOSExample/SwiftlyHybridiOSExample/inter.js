@@ -1,19 +1,8 @@
-var count = 0
 
-function sendCount(){
-    var message = {"count":count}
-    window.webkit.messageHandlers.interOp.postMessage(message)
-}
+/*
+ *Reasigning the webkit messageHandlers.native to the native var
+ *simplifies later code and allows the iOS and Android versions
+ *of the code to be consistant.
+ */
+var native = window.webkit.messageHandlers.native
 
-function storeAndShow(updatedCount){
-    document.querySelector("#resultDisplay").innerHTML = 'came back'
-    count = updatedCount
-    document.querySelector("#resultDisplay").innerHTML = count
-    return count
-}
-
-function doLibCall(){
-    //aSillyLibfunc exists in a directory. Some
-    var aMessage = aSillyLibFunc()
-    document.querySelector("#resultDisplay").innerHTML = aMessage
-}

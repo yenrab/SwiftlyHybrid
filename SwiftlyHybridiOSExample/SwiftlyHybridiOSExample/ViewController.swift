@@ -1,92 +1,27 @@
-/*
-Copyright (c) 2014 Lee Barney
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software
-is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-*/
+//
+//  ViewController.swift
+//  SwiftlyHybridTemplate
+//
+//  Created by Lee Barney on 10/22/15.
+//  Copyright © 2015 Lee Barney. All rights reserved.
+//
 
 import UIKit
-import WebKit
-class ViewController: UIViewController, WKScriptMessageHandler {
 
-    var appWebView:WKWebView?
-    var previousOrientation: UIDeviceOrientation?
+class ViewController: UIViewController {
+    var theHandler:SwiftlyMessageHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let indexHTMLPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        
-        let theConfiguration = WKWebViewConfiguration()
-        theConfiguration.userContentController.addScriptMessageHandler(self, name: "interOp")
-        
-        appWebView = WKWebView(frame: self.view.frame, configuration: theConfiguration)
-        let url = NSURL(fileURLWithPath: indexHTMLPath!)
-        let request = NSURLRequest(URL: url)
-        appWebView!.loadRequest(request)
-        self.view.addSubview(appWebView!)
-        
-        
-        //this line of code causes the orientationChanged function to be called when the device orientationChanges.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged", name: UIDeviceOrientationDidChangeNotification, object: nil)
-
-    }
-    //modify this function to do any JavaScript/Swift interop communication
-    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage){
-        let sentData = message.body as! NSDictionary
-        let aCount:Int = Int(sentData["count"] as! NSNumber)
-        
-        //the last parameter of evaluateJavaScript is a closure that is called after the JavaScript is run.
-        //If there is a value returned from the JavaScript it is passed to the closure as its first parameter.
-        //If there is an error calling the JavaScript, that error is passed as the second parameter.
-        appWebView!.evaluateJavaScript("storeAndShow( \(aCount + 1) )"){(JSReturnValue:AnyObject?, error:NSError?) in
-            if let errorDescription = error?.description{
-                print("returned value: \(errorDescription)")
-            }
-            else if JSReturnValue != nil{
-                print("returned value: \(JSReturnValue!)")
-            }
-            else{
-                print("no return from JS")
-            }
-        }
-    }
-    
-    
-    //This function handles resizing the WKWebView's frame depending on the device orientation.
-    func orientationChanged(){
-        let orientation = UIDevice.currentDevice().orientation
-        if previousOrientation != nil && UIDeviceOrientationIsLandscape(orientation) != UIDeviceOrientationIsLandscape(previousOrientation!)
-            && orientation != UIDeviceOrientation.PortraitUpsideDown
-            && orientation != UIDeviceOrientation.FaceDown
-            && orientation != UIDeviceOrientation.FaceUp{
-                let actualView = appWebView!
-                let updatedFrame = CGRect(x: actualView.frame.origin.x, y: actualView.frame.origin.y, width: actualView.frame.size.height, height: actualView.frame.size.width)
-                actualView.frame = updatedFrame
-        }
-        previousOrientation = orientation
+        // Do any additional setup after loading the view, typically from a nib.
+        theHandler = SwiftlyMessageHandler(theController: self)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

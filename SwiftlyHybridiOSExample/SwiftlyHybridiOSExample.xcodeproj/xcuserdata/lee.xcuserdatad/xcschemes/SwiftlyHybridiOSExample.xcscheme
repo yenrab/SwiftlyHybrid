@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B61F5C01A01567500A0180E"
+               BlueprintIdentifier = "9BC1DB181BDE7EBA00A20600"
                BuildableName = "SwiftlyHybridiOSExample.app"
                BlueprintName = "SwiftlyHybridiOSExample"
-               ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B61F5D51A01567500A0180E"
-               BuildableName = "SwiftlyHybridiOSExampleTests.xctest"
-               BlueprintName = "SwiftlyHybridiOSExampleTests"
                ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,21 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B61F5D51A01567500A0180E"
-               BuildableName = "SwiftlyHybridiOSExampleTests.xctest"
-               BlueprintName = "SwiftlyHybridiOSExampleTests"
-               ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B61F5C01A01567500A0180E"
+            BlueprintIdentifier = "9BC1DB181BDE7EBA00A20600"
             BuildableName = "SwiftlyHybridiOSExample.app"
             BlueprintName = "SwiftlyHybridiOSExample"
             ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
@@ -79,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B61F5C01A01567500A0180E"
+            BlueprintIdentifier = "9BC1DB181BDE7EBA00A20600"
             BuildableName = "SwiftlyHybridiOSExample.app"
             BlueprintName = "SwiftlyHybridiOSExample"
             ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
@@ -98,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B61F5C01A01567500A0180E"
+            BlueprintIdentifier = "9BC1DB181BDE7EBA00A20600"
             BuildableName = "SwiftlyHybridiOSExample.app"
             BlueprintName = "SwiftlyHybridiOSExample"
             ReferencedContainer = "container:SwiftlyHybridiOSExample.xcodeproj">
