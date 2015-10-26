@@ -22,6 +22,6 @@
  SOFTWARE.
  */
 
-/* 
- * put any css here
- */
+h1{
+    color:red;
+}
