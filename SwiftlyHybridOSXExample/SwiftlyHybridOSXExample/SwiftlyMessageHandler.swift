@@ -33,17 +33,17 @@ class SwiftlyMessageHandler:NSObject, WKScriptMessageHandler {
         super.init()
         let theConfiguration = WKWebViewConfiguration()
     
-        theConfiguration.userContentController.addScriptMessageHandler(self, name: "native")
+        theConfiguration.userContentController.add(self, name: "native")
         
         
-        let indexHTMLPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        let indexHTMLPath = Bundle.main.path(forResource: "index", ofType: "html")
         appWebView = WKWebView(frame: theController.view.frame, configuration: theConfiguration)
-        let url = NSURL(fileURLWithPath: indexHTMLPath!)
-        let request = NSURLRequest(URL: url)
-        appWebView!.loadRequest(request)
+        let url = URL(fileURLWithPath: indexHTMLPath!)
+        let request = URLRequest(url: url)
+        appWebView!.load(request)
         theController.view.addSubview(appWebView!)
     }
-    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let sentData = message.body as! NSDictionary
         
         let command = sentData["cmd"] as! String
@@ -52,22 +52,22 @@ class SwiftlyMessageHandler:NSObject, WKScriptMessageHandler {
             guard var count = sentData["count"] as? Int else{
                 return
             }
-            count++
-            response["count"] = count
+            count += 1
+            response["count"] = count as AnyObject
         }
         let callbackString = sentData["callbackFunc"] as? String
-        sendResponse(response, callback: callbackString)
+        sendResponse(aResponse: response, callback: callbackString)
     }
     func sendResponse(aResponse:Dictionary<String,AnyObject>, callback:String?){
         guard let callbackString = callback else{
             return
         }
-        guard let generatedJSONData = try? NSJSONSerialization.dataWithJSONObject(aResponse, options: NSJSONWritingOptions(rawValue: 0)) else{
+        guard let generatedJSONData = try? JSONSerialization.data(withJSONObject: aResponse, options: JSONSerialization.WritingOptions(rawValue: 0)) else{
             print("failed to generate JSON for \(aResponse)")
             return
         }
-        appWebView!.evaluateJavaScript("(\(callbackString)('\(NSString(data:generatedJSONData, encoding:NSUTF8StringEncoding)!)'))"){(JSReturnValue:AnyObject?, error:NSError?) in
-            if let errorDescription = error?.description{
+        appWebView!.evaluateJavaScript("(\(callbackString)('\(NSString(data:generatedJSONData, encoding:String.Encoding.utf8.rawValue)!)'))") {(JSReturnValue, error) in
+            if let errorDescription = (error as NSError?)?.description{
                 print("returned value: \(errorDescription)")
             }
             else if JSReturnValue != nil{
