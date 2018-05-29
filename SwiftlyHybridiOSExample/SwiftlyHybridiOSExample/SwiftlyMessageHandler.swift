@@ -38,6 +38,7 @@ class SwiftlyMessageHandler:NSObject, WKScriptMessageHandler {
         
         let indexHTMLPath = Bundle.main.path(forResource: "index", ofType: "html")
         appWebView = WKWebView(frame: theController.view.frame, configuration: theConfiguration)
+        appWebView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         let url = URL(fileURLWithPath: indexHTMLPath!)
         let request = URLRequest.init(url: url)
         appWebView!.load(request)
